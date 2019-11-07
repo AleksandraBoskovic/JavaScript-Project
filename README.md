@@ -1,1 +1,1 @@
-# matf-kurs
+# JavaScript Project
