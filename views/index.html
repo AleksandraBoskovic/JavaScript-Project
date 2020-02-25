@@ -1,0 +1,37 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+
+</head>
+<body>
+    <div style="margin:auto;width:800px;height:400px;">
+            <img id="full_picture" src="Spiderman.jpg"  style="width:800px;height:400px;"> 
+    </div>
+
+    <div>
+        <p >MOVES NUMBER :</p> 
+        <p id="moves_number" style="height:16px"></p>
+    </div>
+
+    <div style="position: relative; left:600px ;bottom:20px ;height:20px;width:400px;"> 
+        <h1 id="h1">01:10</h1> 
+        <form style="position: relative; left:500px ;bottom:125px ;">
+          <label for="fname">First name:</label><br>
+          <input type="text" id="fname" name="fname" ><br>
+          <label for="lname">Last name:</label><br>
+          <input type="text" id="lname" name="lname" ><br><br>
+          <input class="button" type="button" value="Start" onclick=on_submit() >
+      </form>
+
+
+    </div>
+
+    <div id="puzzle_board">
+    <script> newBoard(); </script>
+    </div>
+
+</body>
+</html>
