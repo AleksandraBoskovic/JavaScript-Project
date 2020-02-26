@@ -5,6 +5,7 @@ var picture_swap=[];
 var picture_id=[];
 let first_name = "";
 let last_name = "";
+var time_end;
 
 function startTime() {
     if((m==1 && s>0) || (m==0 && s>0))
@@ -38,7 +39,7 @@ function on_submit() {
 
 async function end_game() {
     console.log("end");
-    let res = await axios.post('/addPlayer', {moves_number:num_move,fname:first_name,lname:last_name});
+    let res = await axios.post('/addPlayer', {moves_number:num_move,fname:first_name,lname:last_name,time:time_end});
     location.reload();
 }
 
@@ -78,8 +79,8 @@ class marvel_heroes{
                 }
 
             }
+            time_end="["+minutes+":"+seconds+"]";
             end_game();
-
             window.alert("SUCCESS\n You use "+ num_move+ " moves\n Complete for "+minutes+":"+seconds);
 
             m=1;s=11;
